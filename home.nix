@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
 
+let
+  inherit (pkgs.stdenv) isLinux isDarwin;
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "woodendoor";
-  home.homeDirectory = "/Users/woodendoor";
+  home.username = if isDarwin then "woodendoor" else "user";
+  home.homeDirectory = if isDarwin then "/Users/woodendoor" else "/home/user";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
