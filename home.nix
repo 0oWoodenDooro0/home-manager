@@ -89,11 +89,23 @@
     userEmail = "vincent031525@gmail.com";
   };
   
+  programs.lazygit = {
+    enable = true;
+  };
+
+  home.file.".config/lazygit" = {
+    source = ./dotfiles/lazygit;
+    recursive = true;
+  };
+  
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
     shellWrapperName = "y";
   };
   
-  home.file.".config/yazi/theme.toml".source = ./dotfiles/yazi/theme.toml;
+  home.file.".config/yazi" = {
+    source = ./dotfiles/yazi;
+    recursive = true;
+  };
 }
