@@ -85,6 +85,8 @@
   
   programs.git = {
     enable = true;
+    userName = "WoodenDoor";
+    userEmail = "vincent031525@gmail.com";
   };
   
   programs.yazi = {
