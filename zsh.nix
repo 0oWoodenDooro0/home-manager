@@ -7,12 +7,6 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    initExtra = ''
-      export LC_ALL=en_US.utf8
-      export LANG=en_US.utf8
-      export LC_TYPE=en_US.utf8
-    '';
-
     antidote = {
       enable = true;
       plugins = [
